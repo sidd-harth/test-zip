@@ -36,7 +36,7 @@ public class DemoOpentracingApplication {
 	public io.opentracing.Tracer zipkinTracer() {
 		OkHttpSender okHttpSender = OkHttpSender.builder()
 				.encoding(Encoding.JSON)
-				.endpoint("http://zipkin/api/v1/spans")
+				.endpoint("http://zipkin-zzzzzddd.7e14.starter-us-west-2.openshiftapps.com/api/v1/spans")
 				.build();
 		AsyncReporter<Span> reporter = AsyncReporter.builder(okHttpSender).build();
 		Tracing braveTracer = Tracing.newBuilder()
